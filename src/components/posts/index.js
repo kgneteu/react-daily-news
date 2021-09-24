@@ -7,8 +7,9 @@ import Moment from 'react-moment';
 import NewsLetter from '../utils/newsletter';
 
 const PostComponent = (props) => {
-    const post = useSelector(state => state.posts);
+    let post = useSelector(state => state.posts);
     const dispatch = useDispatch();
+
 
     useEffect(()=>{
         dispatch(getPostById(props.match.params.id))
@@ -22,18 +23,17 @@ const PostComponent = (props) => {
         }
     },[post,props.history])
 
-
-    useEffect(()=>{
-        return () => {
-            console.log(props.match.params.id)
-            dispatch(clearPostById())
-        }
-    },[dispatch])
+    console.log('list', props.match.params.id, post.postById?.id)
+    // useEffect(()=>{
+    //     return () => {
+    //         dispatch(clearPostById())
+    //     }
+    // },[dispatch])
 
     console.log('s',props.match.params.id)
     return(
         <>
-           { post.postById ?
+           { (post.postById && +post.postById.id === +props.match.params.id) ?
             <div className="article_container">
                 <h1>{post.postById.title}</h1>
                 <div

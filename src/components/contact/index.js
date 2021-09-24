@@ -19,7 +19,7 @@ const Contact = () => {
             lastname:Yup.string()
             .required('Sorry the lastname is required'),
             message:Yup.string()
-            .required('Sorry yo to say samething')
+            .required('Sorry you should say something.')
             .max(500,'Sorry the message is too long'),
         }),
         onSubmit:(values,{resetForm})=>{
@@ -85,7 +85,7 @@ const Contact = () => {
                </div>
                <div className="form-group">
                     <label htmlFor="message">Message</label>
-                    
+
                     <textarea
                         className="form-control"
                         name="message"
@@ -106,6 +106,6 @@ const Contact = () => {
         </>
     )
 }
-    
+
 
 export default Contact;
