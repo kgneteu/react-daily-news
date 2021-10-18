@@ -1,3 +1,5 @@
 Simple news site. Json-server, React & Redux usage example.
 
-Run `npm install` & `npm start`
+# Usage
+
+Run `npm run install` & `npm run start`
