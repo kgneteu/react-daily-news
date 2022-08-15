@@ -11,6 +11,7 @@
     "concurrently": "^6.2.1",
     "formik": "^2.2.9",
     "json-server": "^0.16.3",
+    "moment": "^2.29.4",
     "react": "^17.0.1",
     "react-bootstrap": "^1.4.0",
     "react-dom": "^17.0.1",
